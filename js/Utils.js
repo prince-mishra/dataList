@@ -3,14 +3,6 @@
  * Date: 16/8/13
  */
 
-<<<<<<< HEAD
-var Helper = {}
-(function(Helper) {
-    Helper.addEvent = function(evt, target, callback) {
-
-    }
-})(Helper);
-=======
 (function(window) {
     var Helper = {
         addEvent : function(element, type, callback) {
@@ -33,4 +25,3 @@ var Helper = {}
     }
     window.Helper = Helper;
 })(window);
->>>>>>> gh-pages

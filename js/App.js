@@ -10,10 +10,6 @@
         this.controller  = new Controller(this.model, this.view);
     }
 
-<<<<<<< HEAD
-    var dataList = new DataList("myDataList");
-
-=======
     DataList.prototype.repaint = function() {
         var self = this;
         self.controller.model.list(function(r){
@@ -83,8 +79,6 @@
             }
         });
     });
-
->>>>>>> gh-pages
 
     window.dataList = dataList;
 

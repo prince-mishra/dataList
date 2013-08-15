@@ -5,10 +5,14 @@
 
 (function(window) {
     var Helper = {
-        addEvent : function(target, evt, callback) {
-            target.addEventListener(evt, function(e) {
-                callback(e);
-            })
+        addEvent : function(element, type, callback) {
+            if (element.addEventListener) {
+                element.addEventListener(type, callback, false);
+            }else if (element.attachEvent) {
+                element.attachEvent('on' + type, callback)
+            } else {
+                element['on' + type] = callback;
+            }
         },
         $ : function(id) {
             return document.querySelector(id);

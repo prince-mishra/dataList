@@ -44,6 +44,14 @@
                         <li class="active"><a href="#">Inbox</a></li>
                         <li><a href="#">Drafts</a></li>
                         <li><a href="#">Sent</a></li>
+                        <div style="width:70px;height:40px;" id="div1" ondrop="dataList.drop(event)" ondragover="dataList.allowDrop(event)"></div>
+                    </ul>
+                </div>
+
+                <div class="well sidebar-nav" ondrop="dataList.drop(event)" ondragover="dataList.allowDrop(event)">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Bin</li>
+                        Drag any checkbox here to remove.
                     </ul>
                 </div>
             </div>

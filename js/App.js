@@ -18,6 +18,24 @@
         });
     }
 
+    DataList.prototype.allowDrop = function(e) {
+        e.preventDefault();
+    }
+
+    DataList.prototype.drag = function(e) {
+        e.dataTransfer.setData("Text",e.target.getAttribute('data-row-id'));
+    }
+
+    DataList.prototype.drop = function(e) {
+        e.preventDefault();
+        var data = e.dataTransfer.getData("Text");
+        var r = confirm("Are you sure you want to remove the selected items?");
+        if (r) {
+            this.controller.remove(data);
+            this.repaint();
+        }
+    }
+
     var dataList = new DataList("myDataList");
 
     // bind events
@@ -50,6 +68,14 @@
                     dataList.controller.remove(id);
                 }
                 dataList.repaint();
+            }
+        });
+
+        Helper.addEvent(document, 'click', function(e) {
+            var el = e.target;
+            //console.log(el.className, el.name, el.nodeName);
+            if (el.name == "row-checkbox" && el.nodeName == "INPUT") {
+                console.log("div.new clicked");
             }
         });
     });

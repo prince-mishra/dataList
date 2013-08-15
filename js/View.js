@@ -5,7 +5,7 @@
 (function(window) {
 
     function View() {
-        this.template = '<tr><td><input type="checkbox" name="row-checkbox" id="{{id}}"/></td><td>{{subject}}</td></tr>';
+        this.template = '<tr><td draggable="true" ondragstart="dataList.drag(event)" data-row-id="{{id}}"><input type="checkbox" name="row-checkbox" id="{{id}}" /></td><td>{{subject}}</td></tr>';
     }
 
     View.prototype.show = function(data) {

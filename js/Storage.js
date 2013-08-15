@@ -9,7 +9,6 @@
         var self = this,
             store = window.localStorage,
             appName = appName;
-
         if (!store[appName]) {
             store[appName] = JSON.stringify({
                 "count" : 0,

@@ -10,6 +10,7 @@
         this.view = view;
     }
 
+<<<<<<< HEAD
     Controller.prototype.add = function(data) {
         var self = this;
         this.model.add(data);
@@ -23,6 +24,19 @@
         this.model.remove(id, function(response) {
             self.view.show(response);
         });
+=======
+    Controller.prototype.add = function(data, callback) {
+        var self = this;
+        this.model.add(data);
+        this.model.list(function(response){
+            callback(response);
+        });
+    }
+
+    Controller.prototype.remove = function(id, callback) {
+        var self = this;
+        this.model.remove(id, callback);
+>>>>>>> gh-pages
     }
 
     window.Controller = Controller;

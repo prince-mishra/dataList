@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
     <title></title>
     <script src="js/Storage.js"></script>
     <script src="js/Controller.js"></script>
@@ -8,5 +9,88 @@
     <script src="js/App.js"></script>
 </head>
 <body>
+=======
+    <title>MyMail</title>
+    <script src="js/Storage.js"></script>
+    <script src="js/Controller.js"></script>
+    <script src="js/View.js"></script>
+    <script src="js/Utils.js"></script>
+    <script src="js/App.js"></script>
+
+    <link href="styles/bootstrap.css" rel="stylesheet"/>
+    <link href="styles/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="styles/structure.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">My Mail</a>
+                <div class="nav-collapse collapse">
+                    <p class="navbar-text pull-right">
+                        Logged in as <a href="#" class="navbar-link">Prince Mishra</a>
+                    </p>
+                    <ul class="nav">
+                        <li class="active"><a href="#">Mail</a></li>
+                        <li><a href="#about">Calendar</a></li>
+                        <li><a href="#contact">Tasks</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="margin-top:50px;">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Mailbox</li>
+                        <li class="active"><a href="#">Inbox</a></li>
+                        <li><a href="#">Drafts</a></li>
+                        <li><a href="#">Sent</a></li>
+                        <div style="width:70px;height:40px;" id="div1" ondrop="dataList.drop(event)" ondragover="dataList.allowDrop(event)"></div>
+                    </ul>
+                </div>
+
+                <div class="well sidebar-nav" ondrop="dataList.drop(event)" ondragover="dataList.allowDrop(event)">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Bin</li>
+                        Drag any checkbox here to remove.
+                    </ul>
+                </div>
+            </div>
+            <div class="span9">
+                <button class="btn btn-primary" id="add-btn">Add</button>
+                <button class="btn btn-danger" id="remove-btn">Remove</button>
+                <table class="table table-hover table-bordered" style="margin-top:20px;">
+                    <thead>
+                        <th class="row-checkbox">#</th>
+                        <th>Subject</th>
+                    </thead>
+                    <tbody id="content-body">
+                        <tr>
+                            <td class="row-checkbox"><input type="checkbox" /></td>
+                            <td>subject</td>
+                        </tr>
+                        <tr>
+                            <td class="row-checkbox"><input type="checkbox" /></td>
+                            <td>subject</td>
+                        </tr>
+                        <tr>
+                            <td class="row-checkbox"><input type="checkbox" /></td>
+                            <td>subject</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+>>>>>>> gh-pages
 </body>
 </html>

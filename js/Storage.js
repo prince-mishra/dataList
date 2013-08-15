@@ -9,7 +9,10 @@
         var self = this,
             store = window.localStorage,
             appName = appName;
+<<<<<<< HEAD
 
+=======
+>>>>>>> gh-pages
         if (!store[appName]) {
             store[appName] = JSON.stringify({
                 "count" : 0,
@@ -101,6 +104,13 @@
 
             list : function(callback) {
                 var items = _list();
+<<<<<<< HEAD
+=======
+                // ugly hack. TODO : use a structure where data is differentiable from metadata.
+                delete items['count'];
+                delete items['lastId'];
+
+>>>>>>> gh-pages
                 handleCallback(callback, items);
             },
 

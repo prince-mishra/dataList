@@ -5,11 +5,7 @@
 (function(window) {
 
     function View() {
-        this.template =
-            '<div>' +
-                '<input type="checkbox" name="row-checkbox" id="{{id}}" class="row-checkbox" />' +
-                '<span>{{subject}}</span>' +
-            '</div>';
+        this.template = '<tr><td><input type="checkbox" name="row-checkbox" id="{{id}}"/></td><td>{{subject}}</td></tr>';
     }
 
     View.prototype.show = function(data) {
@@ -19,6 +15,7 @@
             var cur = data[item];
             view += tmpl.replace('{{id}}', cur['id']).replace('{{subject}}', cur['subject']);
         }
+        console.log(view);
         return view;
     }
 

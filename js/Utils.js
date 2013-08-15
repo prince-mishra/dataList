@@ -3,9 +3,21 @@
  * Date: 16/8/13
  */
 
-var Helper = {}
-(function(Helper) {
-    Helper.addEvent = function(evt, target, callback) {
+(function(window) {
+    var Helper = {
+        addEvent : function(target, evt, callback) {
+            target.addEventListener(evt, function(e) {
+                callback(e);
+            })
+        },
+        $ : function(id) {
+            return document.querySelector(id);
+        },
+
+        $$ : function(selector) {
+            return document.querySelectorAll(selector);
+        }
 
     }
-})(Helper);
+    window.Helper = Helper;
+})(window);

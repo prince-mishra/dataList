@@ -10,19 +10,17 @@
         this.view = view;
     }
 
-    Controller.prototype.add = function(data) {
+    Controller.prototype.add = function(data, callback) {
         var self = this;
         this.model.add(data);
         this.model.list(function(response){
-            self.view.show(response);
+            callback(response);
         });
     }
 
-    Controller.prototype.remove = function(id) {
+    Controller.prototype.remove = function(id, callback) {
         var self = this;
-        this.model.remove(id, function(response) {
-            self.view.show(response);
-        });
+        this.model.remove(id, callback);
     }
 
     window.Controller = Controller;

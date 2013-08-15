@@ -101,6 +101,10 @@
 
             list : function(callback) {
                 var items = _list();
+                // ugly hack. TODO : use a structure where data is differentiable from metadata.
+                delete items['count'];
+                delete items['lastId'];
+
                 handleCallback(callback, items);
             },
 
